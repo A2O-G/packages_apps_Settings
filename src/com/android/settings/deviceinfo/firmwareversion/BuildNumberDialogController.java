@@ -50,10 +50,10 @@ public class BuildNumberDialogController {
         StringBuilder sb = new StringBuilder();
         sb.append(BidiFormatter.getInstance().unicodeWrap(
                 TextUtils.isEmpty(Build.VENDOR.BUILD_NUMBER_OVERRIDE) ? Build.DISPLAY : Build.VENDOR.BUILD_NUMBER_OVERRIDE));
-        String pixelExperienceVersion = getPixelExperienceVersion();
-        if (!pixelExperienceVersion.equals("")){
+        String CtospVersion = getCtospVersion();
+        if (!CtospVersion.equals("")){
             sb.append("\n");
-            sb.append(pixelExperienceVersion);
+            sb.append(CtospVersion);
         }
         mDialog.setText(BUILD_NUMBER_VALUE_ID, sb.toString());
     }
